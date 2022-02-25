@@ -53,19 +53,16 @@ def get_start():
   if start_point_letter in landmark_choices:
     start_point = landmark_choices[start_point_letter]
     return start_point
-  else:
-    print("Sorry, that's not a landmark we have data on. Let's try this again...")
-    get_start()
+  print("Sorry, that's not a landmark we have data on. Let's try this again...")
+  get_start()
 
 def get_end():
   end_point_letter = input("Ok, where are you headed? Type in the corresponding letter: ")
   if end_point_letter in landmark_choices:
     end_point = landmark_choices[end_point_letter]
     return end_point
-  else:
-    print("Sorry, that's not a landmark we have data on. Let's try this again...")
-    get_end()
-    
+  print("Sorry, that's not a landmark we have data on. Let's try this again...")
+  get_end()
 def get_route(start_point,end_point):
   start_stations = vc_landmarks[start_point]
   end_stations = vc_landmarks[end_point]

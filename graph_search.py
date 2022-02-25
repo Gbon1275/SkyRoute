@@ -12,9 +12,7 @@ def bfs(graph, start_vertex, target_value):
       if neighbor not in visited:
         if neighbor == target_value:
           return path + [neighbor]
-		  
-        else:
-          bfs_queue.append([neighbor, path + [neighbor]])
+        bfs_queue.append([neighbor, path + [neighbor]])
 
 
 def dfs(graph, current_vertex, target_value, visited = None):
